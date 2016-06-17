@@ -3,6 +3,14 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
+  get 'welcome/upcoming_events'
+
+  get 'welcome/contacts'
+
+  get 'welcome/photo_gallery'
+
+  get 'welcome/video_gallery'
+
   root 'welcome#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
