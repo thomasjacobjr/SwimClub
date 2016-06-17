@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <% Page.all.each do |page| %>
+      <li><%= page.menu_title %></li> 
+    <% end %>
+  </ul>
 
 <%= yield %>
 
