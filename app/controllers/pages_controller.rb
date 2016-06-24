@@ -27,11 +27,11 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
   end
 
   def update
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
 
     @page.title = params[:page][:title]
     @page.body = params[:page][:body]
@@ -46,11 +46,11 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
 
     if @page.destroy
       flash[:notice] = "\"#{@page.title}\" was deleted successfully."
-      redirect_to pages_path
+      redirect_to root_path
     else
       flash.now[:alert] = "There was an error deleting the page."
       render :show
