@@ -45,4 +45,10 @@ videos = Page.create!(
   body: "Here we shall have a video gallery showcasing Lorbo's supreme supremeness."
 )
 
+records = Page.create!(
+  menu_title: "Records",
+  title: "Swim Club Team Member Records",
+  body: "Some sort of records database"
+)
+
 puts "Seeds finished"
