@@ -35,6 +35,14 @@ class PagesController < ApplicationController
 
     @page.title = params[:page][:title]
     @page.body = params[:page][:body]
+
+    if @page.save
+      flash[:notice] = "Page was updated."
+      redirect_to @page
+    else
+      flash.now[:alert] = "There was an error saving the page. Please try again."
+      render :edit
+    end
   end
 
   def destroy
