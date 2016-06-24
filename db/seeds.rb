@@ -9,6 +9,12 @@
 
 Page.destroy_all
 
+home = Page.create!(
+  menu_title: "Home",
+  title: "Sun City Festival Swimmer's Club",
+  body: "Temporary Home Page Text. Lorbo is Boss Man Status Achieved."
+)
+
 about_page = Page.create!(
   menu_title: "About",
   title: "About the Sun City Festival Swimmer's Club",
@@ -27,7 +33,16 @@ contacts = Page.create!(
   body: "A Contact List will be implemented here eventually."
 )
 
-puts "Seed finished"
-puts "#{about_page.menu_title} page was created"
-puts "#{upcoming_events.menu_title} page was created"
-puts "#{contacts.menu_title} page was created"
+photos = Page.create!(
+  menu_title: "Photos",
+  title: "Photos",
+  body: "A list of photos will be implemented here eventually!"
+)
+
+videos = Page.create!(
+  menu_title: "Videos",
+  title: "Video Gallery",
+  body: "Here we shall have a video gallery showcasing Lorbo's supreme supremeness."
+)
+
+puts "Seeds finished"
