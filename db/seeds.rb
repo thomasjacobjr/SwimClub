@@ -7,15 +7,27 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'random_data'
 
-N_PAGES = 50
+Page.destroy_all
 
-# Create Pages
-N_PAGES.times do
-  Page.create!(
-    title: Faker::Hipster.sentence,
-    body: Faker::Hipster.paragraph
-  )
-end
+about_page = Page.create!(
+  menu_title: "About",
+  title: "About the Sun City Festival Swimmer's Club",
+  body: "A Body will be here eventually. How exciting! Lorbo is pleased."
+)
+
+upcoming_events = Page.create!(
+  menu_title: "Upcoming Events",
+  title: "Upcoming Swimming Events",
+  body: "Here will be list of upcoming events for the swim club. Members will be able to update this page with new events and links"
+)
+
+contacts = Page.create!(
+  menu_title: "Contacts",
+  title: "Contacts",
+  body: "A Contact List will be implemented here eventually."
+)
 
 puts "Seed finished"
-puts "#{N_PAGES} additional pages created."
+puts "#{about_page.menu_title} page was created"
+puts "#{upcoming_events.menu_title} page was created"
+puts "#{contacts.menu_title} page was created"
