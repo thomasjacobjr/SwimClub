@@ -2,6 +2,6 @@
 
 <ul>
   <% Page.all.each do |page| %>
-    <li><%= page.title %></li>
+    <li><%= link_to page.title, page %></li>
   <% end %>
 </ul>
