@@ -22,6 +22,7 @@ ActiveAdmin.register User do
     column :admin
     column :created_at
   end
+
 # or
 #
 # permit_params do
