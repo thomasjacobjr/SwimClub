@@ -53,3 +53,5 @@ gem 'faker'
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'devise'
+
+gem 'activeadmin', '~> 1.0.0.pre2'
