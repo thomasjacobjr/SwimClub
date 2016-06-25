@@ -58,7 +58,16 @@ admin = User.new(
   admin: true
 )
 
+standard = User.new(
+  email: "standard@test.com",
+  password: "password",
+  password_confirmation: "password",
+  admin: false
+)
+
 admin.skip_confirmation!
-admin.save 
+admin.save
+standard.skip_confirmation!
+standard.save
 
 puts "Seeds finished"

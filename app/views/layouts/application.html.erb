@@ -8,6 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <p class="alert"><%= alert %>
   <div class="container">
     <ul class="nav nav-tabs nav-justified navbar-fixed-top">
       <% Page.all.each do |page| %>
