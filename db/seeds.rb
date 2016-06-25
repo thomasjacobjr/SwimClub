@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'random_data'
-
+User.destroy_all
 Page.destroy_all
 
 home = Page.create!(
@@ -50,5 +50,15 @@ records = Page.create!(
   title: "Swim Club Team Member Records",
   body: "Some sort of records database"
 )
+
+admin = User.new(
+  email: "admin@example.com",
+  password: "password",
+  password_confirmation: "password",
+  admin: true
+)
+
+admin.skip_confirmation!
+admin.save 
 
 puts "Seeds finished"

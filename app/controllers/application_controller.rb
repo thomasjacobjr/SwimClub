@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate_admin_user!
-    redirect_to new_user_session_path unless current_user.try(:is_admin?)
+    if current_user
+      unless current_user.admin?
+        redirect_to root_path, alert: t('alerts.admins_only')
+      end
+    else
+      redirect_to new_user_session_path
+    end
   end
+
 end
