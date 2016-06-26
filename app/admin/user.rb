@@ -21,6 +21,7 @@ ActiveAdmin.register User do
     column :email
     column :admin
     column :created_at
+    actions 
   end
 
 # or
