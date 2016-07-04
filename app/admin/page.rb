@@ -17,6 +17,10 @@ ActiveAdmin.register Page do
     f.actions
   end
 
+  action_item :view, only: :show do
+    link_to 'View on site', page_path(page)
+  end
+
   index do
     selectable_column
     column :menu_title
