@@ -46,6 +46,8 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  gem 'rails_db'
 end
 
 gem 'faker'
