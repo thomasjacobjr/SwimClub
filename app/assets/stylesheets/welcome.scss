@@ -4,6 +4,15 @@
 
 body { padding-top: 50px; }
 
-h1, h2, p {
+h1, h2, {
+  text-align: center;
+}
+
+.col-md-8 {
+  float: none;
+  margin: auto;
+}
+
+p {
   text-align: center;
 }

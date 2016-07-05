@@ -10,9 +10,9 @@
 <body>
   <p class="alert"><%= alert %></p>
   <div class="container">
-    <ul class="nav nav-tabs nav-justified navbar-fixed-top">
+    <ul class="nav nav-pills navbar-fixed-top">
       <% Page.all.each do |page| %>
-        <li><%= link_to page.menu_title, page, class: "btn btn-success" %></li>
+        <li><%= link_to page.menu_title, page, class: "btn navbar-btn" %></li>
       <% end %>
     </ul>
 
