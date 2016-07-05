@@ -12,7 +12,7 @@ ActiveAdmin.register Page do
     f.inputs 'Details' do
       f.input :menu_title
       f.input :title
-      f.input :body
+      f.input :body, :as => :ckeditor, label: false
     end
     f.actions
   end

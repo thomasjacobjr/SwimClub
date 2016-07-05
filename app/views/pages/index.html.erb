@@ -1,9 +1,0 @@
-<h1>Index of Page Titles</h1>
-
-<%= link_to "New Page", new_page_path, class: 'btn btn-success' %>
-
-<ul>
-  <% @pages.each do |page| %>
-    <li><%= link_to page.title, page %></li>
-  <% end %>
-</ul>
