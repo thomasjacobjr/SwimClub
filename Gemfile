@@ -60,4 +60,5 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 
 gem 'ckeditor'
 
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'mini_magick'
