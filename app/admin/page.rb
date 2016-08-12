@@ -1,5 +1,6 @@
 ActiveAdmin.register Page do
   controller do
+    layout 'active_admin.application'
     def find_resource
       scoped_collection.friendly.find(params[:id])
     end
